@@ -16,13 +16,13 @@ services:
     cap_add:
       - ALL
     privileged: true
-    deploy:
-      mode: global
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 120s
+    # deploy:
+    #   mode: global
+    #   restart_policy:
+    #     condition: on-failure
+    #     delay: 5s
+    #     max_attempts: 3
+    #     window: 120s
     volumes:
       - esdata1:/usr/share/elasticsearch/data
     ports:
@@ -45,13 +45,13 @@ services:
     cap_add:
       - ALL
     privileged: true
-    deploy:
-      mode: global
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 120s
+    # deploy:
+    #   mode: global
+    #   restart_policy:
+    #     condition: on-failure
+    #     delay: 5s
+    #     max_attempts: 3
+    #     window: 120s
     volumes:
       - esdata2:/usr/share/elasticsearch/data
   elasticsearch3:
@@ -71,13 +71,13 @@ services:
     cap_add:
       - ALL
     privileged: true
-    deploy:
-      mode: global
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 120s
+    # deploy:
+    #   mode: global
+    #   restart_policy:
+    #     condition: on-failure
+    #     delay: 5s
+    #     max_attempts: 3
+    #     window: 120s
     volumes:
       - esdata3:/usr/share/elasticsearch/data
   kibana:
@@ -95,13 +95,13 @@ services:
         hard: -1
     cap_add:
       - ALL
-    deploy:
-      mode: global
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 120s
+    # deploy:
+    #   mode: global
+    #   restart_policy:
+    #     condition: on-failure
+    #     delay: 5s
+    #     max_attempts: 3
+    #     window: 120s
   nginx:
     image: nginx:1.15.6-alpine
     ports:
